@@ -9,8 +9,8 @@ populateUI();
 // save selected movie index
 
 function setMovieData(movieIndex, moviePrice) {
-    localStorage.setItem("slectedMovieIndex", movieIndex);
-    localStorage.setItem("slectedMovieprice", moviePrice);
+    localStorage.setItem("selectedMovieIndex", movieIndex);
+    localStorage.setItem("selectedMovieprice", moviePrice);
 }
 
 // uppdatera priset
@@ -37,13 +37,11 @@ function populateUI() {
             }
         });
     }
-
     const selectedMovieIndex = localStorage.getItem("selectedMovieIndex");
+    console.log(selectedMovieIndex);
     if (selectedMovieIndex !== null) {
         movieSelect.selectedIndex = selectedMovieIndex;
     }
-
-    console.log(selectedSeats);
 }
 
 // movie select
